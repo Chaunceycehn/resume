@@ -40,7 +40,7 @@
 		<div class="loading"></div>
 	</div>
 
-	<div class="topnavbar ">
+	<div id="topnavbar" class="topnavbar">
 		<div class="topnavbar-inner clearfix">
 			<a class="logo" href="#" alt="logo">
 				<span class="rs">RS</span>
@@ -197,6 +197,14 @@
 	<script>
 		setTimeout(function(){siteWelcone.classList.remove('active')},1000)
 		
+		window.onscroll = function(xx){
+			if(window.scrollY > 0){
+				topnavbar.classList.add('sticky')
+			}
+			else{
+				topnavbar.classList.remove('sticky')
+			}
+		}
 	</script>
 	</body>
 
