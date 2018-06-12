@@ -1,101 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>陈创个人简历</title>
 	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="./loading.css">
 	<script src="//at.alicdn.com/t/font_641473_3o1b3j70bo11yvi.js"></script>
 	<style type="text/css">
 		.icon {
-		   width: 1em; height: 1em;
-		   vertical-align: -0.15em;
-		   fill: currentColor;
-		   overflow: hidden;
+			width: 1em;
+			height: 1em;
+			vertical-align: -0.15em;
+			fill: currentColor;
+			overflow: hidden;
+		}
+
+		.site-welcome{
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgb(228, 222, 222);
+			z-index: 1;
+			justify-content: center;
+			align-items: center;
+		}
+		.site-welcome.active{
+			display: flex;
 		}
 	</style>
 </head>
-<body>
-	<div class="topnavbar ">	
-		<div class="topnavbar-inner clearfix">
-				<a class="logo"  href="#" alt="logo">
-						<span class="rs">RS</span><span class="rscard">card</span>
-					</a>
-			
-					<nav style="float: right;">
-						<ul class="clearfix">
-							<li><a href="">关于</a></li>
-							<li><a href="">技能</a></li>
-							<li><a href="">作品</a></li>
-							<li><a href="">博客</a></li>
-							<li><a href="">日历</a></li>
-							<li><a href="">联系方式</a></li>
-							<li><a href="">其他</a></li>
-						</ul>
-					</nav>
-		</div>
-		
+<div <body>
+	<div id="siteWelcone" class="site-welcome active">
+		<div class="loading"></div>
 	</div>
-	<div class="banner" >
+
+	<div class="topnavbar ">
+		<div class="topnavbar-inner clearfix">
+			<a class="logo" href="#" alt="logo">
+				<span class="rs">RS</span>
+				<span class="rscard">card</span>
+			</a>
+
+			<nav style="float: right;">
+				<ul class="clearfix">
+					<li>
+						<a href="">关于</a>
+					</li>
+					<li>
+						<a href="">技能</a>
+					</li>
+					<li>
+						<a href="">作品</a>
+					</li>
+					<li>
+						<a href="">博客</a>
+					</li>
+					<li>
+						<a href="">日历</a>
+					</li>
+					<li>
+						<a href="">联系方式</a>
+					</li>
+					<li>
+						<a href="">其他</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+	</div>
+	<div class="banner">
 		<div class="mask"></div>
 	</div>
-	<main >
+	<main>
 		<div class="card ">
-				<div class="pictureandtext clearfix">
-						<div class="picture">
-								<img src="./img/touxiang.jpg " alt="头像">
-						</div>
-							<div class="profile">
-								<div class="text">
-									<span class="welcome">hello
-										<span class="triangle"></span>
-									</span>
-									<h1>陈创</h1>
-									<p>前端开发工程师</p>
-									<hr>
-									<dl>
-										<dt>年龄</dt>
-										<dd>22</dd>
-										<dt>所在城市</dt>
-										<dd>温州</dd>
-										<dt>邮箱</dt>
-										<dd>chchuang@foxmail.com</dd>
-										<dt>手机</dt>
-										<dd>13587862772</dd>				
-									</dl>
-								</div>
-							</div>
-						
+			<div class="pictureandtext clearfix">
+				<div class="picture">
+					<img src="./img/touxiang.jpg " alt="头像">
 				</div>
-				<footer class="media">
-						<a href="#">
-							<svg class="icon" aria-hidden="true">
-								<use xlink:href="#icon-twitter"></use>
-							</svg>
-						</a>
-						<a href="#">
-							<svg class="icon" aria-hidden="true">
-								<use xlink:href="#icon-weibo"></use>
-							</svg>
-						</a>
-						<a href="#">
-							<svg class="icon" aria-hidden="true">
-								<use xlink:href="#icon-zhihu"></use>
-							</svg>
-						</a>
-						<a href="#">
-							<svg class="icon" aria-hidden="true">
-								<use xlink:href="#icon-github"></use>
-							</svg>
-						</a>
-					</footer>
+				<div class="profile">
+					<div class="text">
+						<span class="welcome">hello
+							<span class="triangle"></span>
+						</span>
+						<h1>陈创</h1>
+						<p>前端开发工程师</p>
+						<hr>
+						<dl>
+							<dt>年龄</dt>
+							<dd>22</dd>
+							<dt>所在城市</dt>
+							<dd>温州</dd>
+							<dt>邮箱</dt>
+							<dd>chchuang@foxmail.com</dd>
+							<dt>手机</dt>
+							<dd>13587862772</dd>
+						</dl>
+					</div>
+				</div>
+
+			</div>
+			<footer class="media">
+				<a href="#">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-twitter"></use>
+					</svg>
+				</a>
+				<a href="#">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-weibo"></use>
+					</svg>
+				</a>
+				<a href="#">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-zhihu"></use>
+					</svg>
+				</a>
+				<a href="#">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-github"></use>
+					</svg>
+				</a>
+			</footer>
 		</div>
 		<p class="downloadresume-wrapper">
 			<a href="./resume.doc" class="downloadresume" target="-blank" download="">下载 PDF 简历</a>
 		</p>
 		<P class="self-introduction">
-			KKKKKKKKKKKKKKKKKKKKK<br>KKKKKKKKKKKKKKKKKKKKKKKK
+			KKKKKKKKKKKKKKKKKKKKK
+			<br>KKKKKKKKKKKKKKKKKKKKKKKK
 		</P>
 	</main>
 	<section class="skills">
@@ -103,39 +142,39 @@
 		<ol class=" clearfix">
 			<li>
 				<h3>HTML 5 &amp; CSS 3</h3>
-				<div class="progressBar" >
+				<div class="progressBar">
 					<div class="progress"></div>
 				</div>
 			</li>
 			<li>
 				<h3>HTML 5 &amp; CSS 3</h3>
-				<div class="progressBar" >
+				<div class="progressBar">
 					<div class="progress"></div>
 				</div>
 			</li>
 			<li>
-					<h3>JavaScript</h3>
-					<div class="progressBar" >
-						<div class="progress"></div>
-					</div>
+				<h3>JavaScript</h3>
+				<div class="progressBar">
+					<div class="progress"></div>
+				</div>
 			</li>
 			<li>
-					<h3>jQuery</h3>
-					<div class="progressBar" >
-						<div class="progress"></div>
-					</div>
+				<h3>jQuery</h3>
+				<div class="progressBar">
+					<div class="progress"></div>
+				</div>
 			</li>
 			<li>
-					<h3>vue</h3>
-					<div class="progressBar" >
-						<div class="progress"></div>
-					</div>
+				<h3>vue</h3>
+				<div class="progressBar">
+					<div class="progress"></div>
+				</div>
 			</li>
 			<li>
-					<h3>React</h3>
-					<div class="progressBar" >
-						<div class="progress"></div>
-					</div>
+				<h3>React</h3>
+				<div class="progressBar">
+					<div class="progress"></div>
+				</div>
 			</li>
 		</ol>
 	</section>
@@ -155,7 +194,10 @@
 		</div>
 	</section>
 
+	<script>
+		setTimeout(function(){siteWelcone.classList.remove('active')},1000)
+		
+	</script>
+	</body>
 
-</body>
 </html>
-
