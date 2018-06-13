@@ -231,13 +231,8 @@
 			aTags[i].onclick = function(x){
 				x.preventDefault()
 				let a=x.currentTarget
-				console.log(a)
 				let href = a.getAttribute('href')
-				console.log(href)
-
 				let element = document.querySelector(href)
-				
-				console.log(element)
 				let top = element.offsetTop
 				window.scrollTo(0,top-80)
 			}
