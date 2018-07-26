@@ -8,6 +8,7 @@
 	<title>陈创个人简历</title>
 	<link rel="stylesheet" href="./style.css">
 	<link rel="stylesheet" href="./loading.css">
+	<link rel="stylesheet" href="./swiper.min.css">
 	<script src="//at.alicdn.com/t/font_641473_3o1b3j70bo11yvi.js"></script>
 	<style type="text/css">
 		.icon {
@@ -17,26 +18,11 @@
 			fill: currentColor;
 			overflow: hidden;
 		}
-
-		.site-welcome {
-			display: none;
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: rgb(228, 222, 222);
-			z-index: 1;
-			justify-content: center;
-			align-items: center;
-		}
-
-		.site-welcome.active {
-			display: flex;
-		}
 	</style>
 </head>
-<div <body>
+
+<body>
+
 	<div id="siteWelcone" class="site-welcome active">
 		<div class="loading"></div>
 	</div>
@@ -140,6 +126,7 @@
 				</a>
 			</footer>
 		</div>
+
 		<p class="downloadresume-wrapper">
 			<a href="./resume.doc" class="downloadresume" target="-blank" download="">下载 PDF 简历</a>
 		</p>
@@ -189,40 +176,39 @@
 			</li>
 		</ol>
 	</section>
+
 	<section data-x class="portfolio" id="production">
 		<h2>作品集</h2>
-		<nav>
-			<ol class="clearfix">
-				<li id="portfolio1">所有</li>
-				<li id="portfolio2">框架</li>
-				<li id="portfolio3">原生 JS &amp; CSS</li>
-			</ol>
-			<div id="portfolioBar" class="bar state-1">
-				<div class="bar-inner"></div>
+		<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<a class="swiper-slide" target="_blank" href="https://chaunceycehn.github.io/imagepicker/index.html">
+						<img src="./img/TIM截图20180726142620.png" alt="">
+					</a>
+					<a class="swiper-slide" target="_blank" href="https://chaunceycehn.github.io/applelike-slide/demo.html">
+						<img src="./img/appleslide.png" alt="">
+					</a>
+					<a class="swiper-slide" target="_blank" href="https://chaunceycehn.github.io/nav-demo/index.html">
+						<img src="./img/TIM截图20180726142238.png" alt="">
+					</a>
+					<a class="swiper-slide" target="_blank" href="https://chaunceycehn.github.io/canvas/index.html">
+						<img src="./img/canvan.png" alt="">
+					</a>
+				</div>
+				<!-- 如果需要分页器 -->
+				<div class="swiper-pagination"></div>
+		
+				<!-- 如果需要导航按钮 -->
+				<div class="swiper-button-prev">
+					<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'>
+						<path d='M0,22L22,0l2.1,2.1L4.2,22l19.9,19.9L22,44L0,22L0,22L0,22z' fill='#e6686a' />
+					</svg>
+				</div>
+				<div class="swiper-button-next">
+					<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'>
+						<path d='M27,22L27,22L5,44l-2.1-2.1L22.8,22L2.9,2.1L5,0L27,22L27,22z' fill='#e6686a' />
+					</svg>
+				</div>
 			</div>
-		</nav>
-		<script>
-			portfolio1.onclick = function () {
-				portfolioBar.className = 'bar state-1'
-			}
-			portfolio2.onclick = function () {
-				portfolioBar.className = 'bar state-2'
-			}
-			portfolio3.onclick = function () {
-				portfolioBar.className = 'bar state-3'
-			}
-		</script>
-		<div class="works" style="height: 597px;">
-			<div class="big" style="top: 0; left: 0;">
-				<img src="./img/1.jpg" alt="作品1">
-			</div>
-			<div class="small" style="top: 0; left: 645px;">
-				<img src="./img/2.jpg" alt="作品2">
-			</div>
-			<div class="small" style="top: 312px; left: 645px;">
-				<img src="./img/3.jpg" alt="作品3">
-			</div>
-		</div>
 	</section>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
 
@@ -307,6 +293,25 @@
 
 
 	</script>
-	</body>
+	<script src="./swiper.min.js"></script>
+	<script>        
+		var mySwiper = new Swiper('.swiper-container', {
+			autoplay: true,
+			loop: true,
+			preventClicks: true,
+			// 如果需要分页器
+			pagination: {
+				el: '.swiper-pagination',
+			},
+
+			// 如果需要前进后退按钮
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+
+		})        
+	</script>
+</body>
 
 </html>
