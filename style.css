@@ -117,9 +117,11 @@ body main .downloadresume:hover { box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.2
 
 .self-introduction { max-width: 930px; margin-left: auto; margin-right: auto; text-align: center; } 
 
+section.message,
 section.skills,
 section.portfolio { max-width: 930px; margin-left: auto; margin-right: auto; text-align: center; } 
 
+section.message > h2,
 section.skills > h2,
 section.portfolio > h2 { text-align: center; color: #3d4451; font-size: 34px; line-height: 1.2; font-weight: 600; margin-top: 60px; } 
 
@@ -142,3 +144,10 @@ section.portfolio .swiper-container { margin-top: 35px; width: 940px; height: 48
 section.portfolio .swiper-slide>img { margin: 0; padding: 0; max-height: 100%; max-width: 100%; } 
 
 section.portfolio .swiper-pagination-bullet-active { opacity: 1; background: #e6686a; } 
+
+
+
+
+section.message {
+    border: 1px solid red;
+}

@@ -9,6 +9,11 @@
 	<link rel="stylesheet" href="./style.css">
 	<link rel="stylesheet" href="./loading.css">
 	<link rel="stylesheet" href="./swiper.min.css">
+	<!-- 存储服务 -->
+	<script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.9.0/dist/av-min.js"></script>
+	<!-- 实时消息服务 -->
+	<script src="//cdn.jsdelivr.net/npm/leancloud-realtime@4.2.0/dist/realtime.browser.min.js"></script>
+
 	<script src="//at.alicdn.com/t/font_641473_3o1b3j70bo11yvi.js"></script>
 	<style type="text/css">
 		.icon {
@@ -180,39 +185,103 @@
 	<section data-x class="portfolio" id="production">
 		<h2>作品集</h2>
 		<div class="swiper-container">
-				<div class="swiper-wrapper">
-					<a class="swiper-slide" target="_blank" href="https://chaunceycehn.github.io/imagepicker/index.html">
-						<img src="./img/TIM截图20180726142620.png" alt="">
-					</a>
-					<a class="swiper-slide" target="_blank" href="https://chaunceycehn.github.io/applelike-slide/demo.html">
-						<img src="./img/appleslide.png" alt="">
-					</a>
-					<a class="swiper-slide" target="_blank" href="https://chaunceycehn.github.io/nav-demo/index.html">
-						<img src="./img/TIM截图20180726142238.png" alt="">
-					</a>
-					<a class="swiper-slide" target="_blank" href="https://chaunceycehn.github.io/canvas/index.html">
-						<img src="./img/canvan.png" alt="">
-					</a>
-				</div>
-				<!-- 如果需要分页器 -->
-				<div class="swiper-pagination"></div>
-		
-				<!-- 如果需要导航按钮 -->
-				<div class="swiper-button-prev">
-					<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'>
-						<path d='M0,22L22,0l2.1,2.1L4.2,22l19.9,19.9L22,44L0,22L0,22L0,22z' fill='#e6686a' />
-					</svg>
-				</div>
-				<div class="swiper-button-next">
-					<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'>
-						<path d='M27,22L27,22L5,44l-2.1-2.1L22.8,22L2.9,2.1L5,0L27,22L27,22z' fill='#e6686a' />
-					</svg>
-				</div>
+			<div class="swiper-wrapper">
+				<a class="swiper-slide" target="_blank" href="https://chaunceycehn.github.io/imagepicker/index.html">
+					<img src="./img/TIM截图20180726142620.png" alt="">
+				</a>
+				<a class="swiper-slide" target="_blank" href="https://chaunceycehn.github.io/applelike-slide/demo.html">
+					<img src="./img/appleslide.png" alt="">
+				</a>
+				<a class="swiper-slide" target="_blank" href="https://chaunceycehn.github.io/nav-demo/index.html">
+					<img src="./img/TIM截图20180726142238.png" alt="">
+				</a>
+				<a class="swiper-slide" target="_blank" href="https://chaunceycehn.github.io/canvas/index.html">
+					<img src="./img/canvan.png" alt="">
+				</a>
 			</div>
+			<!-- 如果需要分页器 -->
+			<div class="swiper-pagination"></div>
+
+			<!-- 如果需要导航按钮 -->
+			<div class="swiper-button-prev">
+				<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'>
+					<path d='M0,22L22,0l2.1,2.1L4.2,22l19.9,19.9L22,44L0,22L0,22L0,22z' fill='#e6686a' />
+				</svg>
+			</div>
+			<div class="swiper-button-next">
+				<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'>
+					<path d='M27,22L27,22L5,44l-2.1-2.1L22.8,22L2.9,2.1L5,0L27,22L27,22z' fill='#e6686a' />
+				</svg>
+			</div>
+		</div>
 	</section>
+
+	<section data-x class="message" id="message">
+		<h2>留言</h2>
+		<ol id="messageList">
+		</ol>
+		<form id="postMessageForm" style="width: 700px; margin: 50px auto;">
+			<label for="">姓名</label>
+			<input type="text" name="name">
+			<label for="">内容</label>
+			<input type="text" name="content">
+			<input type="submit" value="提交">
+		</form>
+	</section>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
 
 	<script>
+
+
+		var APP_ID = 'kG67ohtbEjpk6ditRyjTzQP9-gzGzoHsz';
+		var APP_KEY = '1jV1YrVw4IoLvL3ltRgzShPt';
+
+		AV.init({
+			appId: APP_ID,
+			appKey: APP_KEY
+		});
+
+
+		let myForm = document.querySelector('#postMessageForm')
+		myForm.addEventListener('submit', function (e) {
+			e.preventDefault()
+			let content = myForm.querySelector('input[name=content]').value
+			let name = myForm.querySelector('input[name=name]').value
+			var Message = AV.Object.extend('Message');
+			var message = new Message();
+			message.save({
+				'name': name,
+				'content': content
+			}).then(function (object) {
+				let li = document.createElement('li')
+				li.innerText = `${object.attributes.name}: ${object.attributes.content}`
+				let messageList = document.querySelector('#messageList')
+				messageList.appendChild(li)
+				myForm.querySelector('input[name=content]').value = ''
+				console.log(object)
+			})
+		})
+
+
+
+		var query = new AV.Query('Message');
+		query.find()
+			.then(
+				function (messages) {
+					let array = messages.map((item) => item.attributes)
+					array.forEach((item) => {
+						let li = document.createElement('li')
+						li.innerText = `${item.name}: ${item.content}`
+						let messageList = document.querySelector('#messageList')
+						messageList.appendChild(li)
+					})
+				}
+			)
+
+
+
+
 		setTimeout(function () { siteWelcone.classList.remove('active') }, 1000)
 
 		let specialTags = document.querySelectorAll('[data-x]')
