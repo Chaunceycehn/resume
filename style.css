@@ -12,7 +12,7 @@ h1,h2,h3,h4,h5,h6 { font-weight: normal; }
 
 ul,ol { list-style: none; } 
 
-
+.icon {width: 1em;height: 1em;vertical-align: -0.15em;fill: currentColor;overflow: hidden; } 
 .site-welcome { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgb(228, 222, 222); z-index: 1; justify-content: center; align-items: center; } 
 
 .site-welcome.active { display: flex; } 
@@ -145,16 +145,9 @@ section.portfolio .swiper-slide>img { margin: 0; padding: 0; max-height: 100%; m
 
 section.portfolio .swiper-pagination-bullet-active { opacity: 1; background: #e6686a; } 
 
-section.message > h2{
-    margin-top: 30px; 
-}
+section.message > h2 { margin-top: 30px; } 
 
 
 
-section.message{
-    background-color: white; box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.2); padding: 42px 50px 0px; margin-top: 30px; 
-}
-section.message>ol>li{
-    padding: 10px;
-    border-bottom: 1px solid #797b7e;
-}
+section.message { background-color: white; box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.2); padding: 42px 50px 0px; margin-top: 30px; } 
+section.message>ol>li { padding: 10px; border-bottom: 1px solid #797b7e; } 
