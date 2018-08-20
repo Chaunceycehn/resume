@@ -6,9 +6,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>陈创个人简历</title>
-	<link rel="stylesheet" href="./style.css">
 	<link rel="stylesheet" href="./loading.css">
+	<link rel="stylesheet" href="./style.css">
 	<link rel="stylesheet" href="./swiper.min.css">
+	<link rel="stylesheet" href="./bokebi.css">
+	<script src="https://unpkg.com/scrollreveal"></script>
 	<!-- 存储服务 -->
 	<script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.9.0/dist/av-min.js"></script>
 	<!-- 实时消息服务 -->
@@ -26,8 +28,8 @@
 	<div id="topnavbar" class="topnavbar">
 		<div class="topnavbar-inner clearfix">
 			<a class="logo" href="#" alt="logo">
-				<span class="rs">RS</span>
-				<span class="rscard">card</span>
+				<span class="rs">C</span>
+				<span class="rscard">C</span>
 			</a>
 
 			<nav class="menu" style="float: right;">
@@ -47,22 +49,12 @@
 						</ul>
 					</li>
 					<li>
-						<a href="#bolg">博客</a>
-						<ul class="submenu">
-							<li>作品1</li>
-							<li>作品2</li>
-							<li>作品3</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#menology">日历</a>
-					</li>
-					<li>
-						<a href="#contact">联系方式</a>
-					</li>
-					<li>
 						<a href="#message">留言</a>
 					</li>
+					<li>
+						<a href="https://zhuanlan.zhihu.com/c_180901746" target="_blank">博客</a>
+					</li>
+
 				</ul>
 			</nav>
 		</div>
@@ -75,12 +67,39 @@
 		<div data-x id="about" class="card ">
 			<div class="pictureandtext clearfix">
 				<div class="picture">
-					<img src="./img/touxiang.jpg " alt="头像">
+					<section class="box">
+						<div class="egg-body">
+							<div class="shell">
+								<div class="triangle"></div>
+								<div class="triangle-small"></div>
+								<div class="rectangle r1"></div>
+								<div class="rectangle r2"></div>
+							</div>
+							<div class="crack c1"></div>
+							<div class="crack c2"></div>
+							<div class="crack c3"></div>
+							<div class="crack c4"></div>
+							<div class="crack c5"></div>
+							<div class="eye left"></div>
+							<div class="eye right"></div>
+							<div class="mouth"></div>
+
+						</div>
+						<div class="egg-border"></div>
+						<div class="horn r"></div>
+						<div class="horn m"></div>
+						<div class="horn l"></div>
+						<div class="foot left"></div>
+						<div class="foot right"></div>
+						<div class="paw left"></div>
+						<div class="paw right"></div>
+					</section>
+					<!-- <img src="./img/touxiang.jpg " alt="头像"> -->
 				</div>
 				<div class="profile">
 					<div class="text">
 						<span class="welcome">hello
-							<span class="triangle"></span>
+							<span class="triangle-main"></span>
 						</span>
 						<h1>陈创</h1>
 						<p>前端开发工程师</p>
@@ -88,8 +107,8 @@
 						<dl>
 							<dt>年龄</dt>
 							<dd>22</dd>
-							<dt>所在城市</dt>
-							<dd>温州</dd>
+							<dt>毕业院校</dt>
+							<dd>温州大学城市学院</dd>
 							<dt>邮箱</dt>
 							<dd>chchuang@foxmail.com</dd>
 							<dt>手机</dt>
@@ -100,22 +119,22 @@
 
 			</div>
 			<footer class="media">
-				<a href="#">
+				<a href="https://twitter.com/chaunceycehn" target="_blank">
 					<svg class="icon" aria-hidden="true">
 						<use xlink:href="#icon-twitter"></use>
 					</svg>
 				</a>
-				<a href="#">
+				<a href="https://weibo.com/2731590304/profile?topnav=1&wvr=6&is_all=1" target="_blank">
 					<svg class="icon" aria-hidden="true">
 						<use xlink:href="#icon-weibo"></use>
 					</svg>
 				</a>
-				<a href="#">
+				<a href="https://zhuanlan.zhihu.com/c_180901746" target="_blank">
 					<svg class="icon" aria-hidden="true">
 						<use xlink:href="#icon-zhihu"></use>
 					</svg>
 				</a>
-				<a href="#">
+				<a href="https://github.com/Chaunceycehn" target="_blank">
 					<svg class="icon" aria-hidden="true">
 						<use xlink:href="#icon-github"></use>
 					</svg>
@@ -126,10 +145,41 @@
 		<p class="downloadresume-wrapper">
 			<a href="./resume.doc" class="downloadresume" target="-blank" download="">下载 PDF 简历</a>
 		</p>
-		<P class="self-introduction">
-			陈创，前端工程师
-			<br>技能：前端开发，Rails开发，Node.js开发
-		</P>
+		<ol class="self-introduction">
+			<li>
+				熟悉
+				<b>HTML 5</b> &
+				<b> CSS 3</b>，能够独立制作精美页面。掌握CSS3
+				<b>动画</b>、
+				<b>过渡效果</b>、
+				<b>响应式</b>等常用技术。
+			</li>
+			<li>
+				熟悉
+				<b>JavaScript</b>知识，熟练掌握数据的基本类型、
+				<b>函数</b>、
+				<b>作用域</b>、
+				<b>Array</b>、
+				<b>JSON</b>、
+				<b>闭包</b>、
+				<b>Promise</b>等知识。
+			</li>
+			<li>
+				能够使用
+				<b>Ajax</b>与后端进行交互，了解跨域的常用方案
+				<b>JSONP</b>。
+			</li>
+			<li>
+				熟悉
+				<b>vue</b>框架的使用。
+			</li>
+			<li>
+				熟悉
+				<b>Node.js</b>及
+				<b>npm</b>的使用。了解
+				<b>webpack</b>模块化、工程化。
+			</li>
+		</ol>
 	</main>
 	<section data-x class="skills" id="skill">
 		<h2>技能</h2>
@@ -165,7 +215,7 @@
 				</div>
 			</li>
 			<li>
-				<h3>React</h3>
+				<h3>C语言</h3>
 				<div class="progressBar">
 					<div class="progress" style="width: 40%;"></div>
 				</div>
@@ -175,36 +225,38 @@
 
 	<section data-x class="portfolio" id="production">
 		<h2>作品集</h2>
-		<div class="swiper-container">
-			<div class="swiper-wrapper">
-				<a class="swiper-slide" target="_blank" href="https://chaunceycehn.github.io/imagepicker/index.html">
-					<img src="./img/TIM截图20180726142620.png" alt="">
-				</a>
-				<a class="swiper-slide" target="_blank" href="https://chaunceycehn.github.io/applelike-slide/demo.html">
-					<img src="./img/appleslide.png" alt="">
-				</a>
-				<a class="swiper-slide" target="_blank" href="https://chaunceycehn.github.io/nav-demo/index.html">
-					<img src="./img/TIM截图20180726142238.png" alt="">
-				</a>
-				<a class="swiper-slide" target="_blank" href="https://chaunceycehn.github.io/canvas/index.html">
-					<img src="./img/canvan.png" alt="">
-				</a>
-			</div>
-			<!-- 如果需要分页器 -->
-			<div class="swiper-pagination"></div>
+		<div class="work">
+			<ol>
+				<li class="p1">
+					<a class="portfolio2" target="_blank" href="https://chaunceycehn.github.io/applelike-slide/demo.html">
+						<img src="./img/appleslide.png" alt="" style="width: 100%;">
+					</a>
+					<div>一个简单的轮播页面，使用了Jquery库，能够实现点击切页功能</div>
+				</li>
+				<li class="p2">
 
-			<!-- 如果需要导航按钮 -->
-			<div class="swiper-button-prev">
-				<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'>
-					<path d='M0,22L22,0l2.1,2.1L4.2,22l19.9,19.9L22,44L0,22L0,22L0,22z' fill='#e6686a' />
-				</svg>
-			</div>
-			<div class="swiper-button-next">
-				<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'>
-					<path d='M27,22L27,22L5,44l-2.1-2.1L22.8,22L2.9,2.1L5,0L27,22L27,22z' fill='#e6686a' />
-				</svg>
-			</div>
+					<a class="portfolio3" target="_blank" href="https://chaunceycehn.github.io/nav-demo/index.html">
+						<img src="./img/TIM截图20180726142238.png" alt="" style="width: 100%;">
+					</a>
+					<div>键盘导航： 仅通过原生JS和CSS实现
+							<br> 实现了一个通过可编辑的按键导航网站。通过按下按键，会打开相应的网站
+							<br> 点击圆点可进行编辑。编辑完成会通过获取该网站根目录的/favicon.ico。显示该网站图标。
+							<br>
+					</div>
+				</li>
+				<li class="p3">
+					<a class="portfolio4" target="_blank" href="https://chaunceycehn.github.io/canvas/index.html">
+						<img src="./img/canvan.png" alt="" style="width: 100%;">
+					</a>
+					<div>
+						使用原生JS和CSS实现<br>
+						通过canvasAPI实现了一个画图板<br>
+						能够修改画笔大小和颜色<br>
+					</div>
+				</li>
+			</ol>
 		</div>
+
 	</section>
 
 	<section data-x class="message" id="message">
@@ -219,15 +271,18 @@
 			<input type="submit" value="提交">
 		</form>
 	</section>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
-
 	<script>
-
+		ScrollReveal().reveal('.site-welcome', { distance: '100px' });
+		ScrollReveal().reveal('.topnavbar', { distance: '100px' });
+		ScrollReveal().reveal('.banner', { distance: '100px' });
+		ScrollReveal().reveal('.skills', { distance: '100px' });
+		ScrollReveal().reveal('.portfolio', { distance: '100px' });
+		ScrollReveal().reveal('.message', { distance: '100px' });
 	</script>
-	<script src="./swiper.min.js"></script>
-	<script src="./js/swiper.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
+	<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 	<script src="./js/auto-slide-up.js"></script>
+	<script src="./js/swiper.js"></script>
 	<script src="./js/sticky.js"></script>
 	<script src="./js/message.js"></script>
 	<script src="./js/smoothly.js"></script>
