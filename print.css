@@ -1,0 +1,111 @@
+.clearfix::after { content: ''; display: block; clear: both; } 
+
+a { color: inherit; text-decoration: none; } 
+
+body { background-color: #efefef; margin: 0px; } 
+
+* { margin: 0; padding: 0; } 
+
+hr { height: 0; border: none; border-top: 1px solid #dedede; } 
+
+h1,h2,h3,h4,h5,h6 { font-weight: normal; } 
+
+ul,ol { list-style: none; } 
+
+.icon {width: 1em;height: 1em;vertical-align: -0.15em;fill: currentColor;overflow: hidden; } 
+
+.topnavbar{display:none;}
+
+
+.banner {display: none; } 
+
+.card { max-width: 940px; margin-left: auto; margin-right: auto; background-color: #ffff; box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.49); } 
+
+.card .welcome { background: #e6686a; color: white; display: inline-block; padding: 4px 16px; position: relative; margin-bottom: 10px; } 
+
+.card .welcome .triangle-main { display: block; border: 10px solid transparent; width: 0px; height: 0px; border-left-color: #e6686a; border-top-width: 0px; position: absolute; left: 4px; top: 100%; } 
+
+.card .picture { float: left; } 
+
+.card .text { float: left; margin-left: 65px; width: 940px; } 
+
+.card .pictureandtext { padding: 50px; } 
+
+.card .text h1 { margin-top: 18px; } 
+
+.card .text p { margin-top: 8px; } 
+
+.card hr { margin: 20px 0px; } 
+
+.card dl dt,
+.card dl dd { float: left; } 
+
+.card dl dt { width: 30%; font-weight: bold; margin: 10px 0px; } 
+
+.card dl dd { width: 70%; color: #9da0a7; margin: 10px 0px; } 
+
+.card>footer { background: #e6686a; text-align: center; } 
+
+.card svg { width: 20px; height: 20px; fill: white; vertical-align: top; } 
+
+.card>footer>a { display: inline-block; width: 50px; line-height: 20px; padding: 12px 0; border-radius: 50%; margin: 12px 0; transition: box-shadow 0.3s; } 
+
+.card>footer :hover { background: #cf5d5f; box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.2); } 
+
+body main { margin-top: 0px; } 
+
+body main .downloadresume { font-size: 14px; line-height: 16px; padding: 21px 55px; display: inline-block; border: 1px solid #cdcfd1; background-color: #efefef; border-radius: 3px; color: #3d4451; font-weight: bold; margin: 32px 0; transition: box-shadow 0.3s; } 
+
+body main .downloadresume-wrapper { text-align: center; } 
+
+body main .downloadresume:hover { box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.2); } 
+
+body main .downloadresume {display: none;}
+body main .picture {display: none;}
+body main footer {display: none;}
+
+body main > ul,ol {list-style: circle}
+body main .name1{float: left;}
+body main .age1{float: right;}
+body main .welcome{float: left; position: absolute;left: 180px;}
+body main  hr {display: none;}
+/* body main .text {display: flex;align-items: center;justify-content: space-around} */
+
+.self-introduction { max-width: 930px;  } 
+.self-introduction { background-color: white; box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.2); padding: 42px 50px; margin-top: 30px;}
+section.message,
+
+section.skills { max-width: 940px; margin-left: auto; margin-right: auto; text-align: center; } 
+
+section.message > h2,
+section.skills > h2,
+section.portfolio > h2 { text-align: center; color: #3d4451; font-size: 34px; line-height: 1.2; font-weight: 600; margin-top: 60px; } 
+section.portfolio > h2{margin-bottom: 30px;}
+section.skills {display: none}
+section.portfolio { max-width: 940px; margin-left: auto; margin-right: auto;} 
+.work > ol > li > div{
+    height: 200px;
+    text-align: center;
+}
+.work > ol{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+.work > ol > li{
+    width:100%;
+    background-color: white;
+}
+.work > ol > li{
+    margin-top:30px; 
+    box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.2);
+}
+
+section.message > h2 { margin-top: 30px; margin-bottom: 30px;} 
+
+
+
+section.message>ol { background-color: white; box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.2); padding: 42px 50px; margin-top: 30px; } 
+section.message>ol>li { padding: 10px; border-bottom: 1px solid #797b7e; }
+section.message {display: none;} 
