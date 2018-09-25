@@ -70,7 +70,8 @@ ul,ol { list-style: none; }
 
 .topnavbar .logo .rscard { margin: 0px; color: #797b7e; } 
 
-.banner { height: 515px; background-image: url(./img/phot2.jpg); background-position: center center; background-size: cover; } 
+/* .banner { height: 515px; background-image: url(./img/phot2.jpg); background-position: center center; background-size: cover; }  */
+.banner { height: 515px; background-image: url(http://pflnsml2w.bkt.clouddn.com/phot2.jpg); background-position: center center; background-size: cover; } 
 
 .banner .mask { height: 515px; background-color: #242832cc; } 
 
